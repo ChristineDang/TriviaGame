@@ -22,16 +22,20 @@ $(document).ready(function(){
                 correctAnswer: 3
             }]
         }
+
+    var score = {
+        wins: 0,
+        losses: 0
+    }
         function timer() {
             var remainingTime = parseInt($("#timer").html());
             if(remainingTime != 0){
                 $("#timer").html(--remainingTime);
             } else {
                 $("#timer").text("WOMP WOMP");
-                //show score and tell user they failed 
+                //show score and tell user they've ran out of time
             }
         }
-        //create win and losses variables
     
         //start game when user clicks on start
         $("#start").click(function(){
@@ -64,8 +68,8 @@ $(document).ready(function(){
 
                         //Check if a radio button was selected within time frame
                         //if selected before timer ends, check the value 
-                        //if the value is a correct answer add to wins
-                        //else add to losses
+                        //if the value is a correct answer add to wins by creating an if else statement that calls upon the score variable
+                            //else add to losses
                         
                     }
             
