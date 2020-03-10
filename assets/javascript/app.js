@@ -7,9 +7,9 @@ $(document).ready(function(){
                 correctAnswer: 0
             },
             {
-                Q: "Which one is not something Joey Tribbiani from Friends has said in the show?",
-                answers: ["Joey doesn't share food!", "How you doin?", "Here come the meat sweats", "We were on a break!"],
-                correctAnswer: 3
+                Q: "What is the plastic piece at the end of a shoelace called?",
+                answers: ["Lace Tip", "Aglet", "Lace Guard", "Ulna"],
+                correctAnswer: 1
             }, 
             {
                 Q: "What country is known for potatoes?",
@@ -27,6 +27,9 @@ $(document).ready(function(){
         wins: 0,
         losses: 0
     }
+    var correctAnswer = 0;
+    var incorrectAnswer = 0;
+    
         function timer() {
             var remainingTime = parseInt($("#timer").html());
             if(remainingTime != 0){
@@ -76,11 +79,43 @@ $(document).ready(function(){
 
             }
 
+            //move these vars to the top to make them global/organized
+                // var score = {
+                //     wins: 0,
+                //     losses: 0
+
+                // var correctAnswer = 0;
+                // var incorrectAnswer = 0;
+                // var userAnswer;
+
+
+
             //create a reset of game function
             //this function gets triggered when user selects play again
             //show score 
             //ask if they want to play again
+                    //if the value is a correct answer add to wins by creating an if else statement that calls upon the score variable
+                    //else add to losses
+                        // function checkAnswer() {
+                        //     questionsArray.forEach (question => {
+                        //         userAnswer = document.querySelector();
 
+                        //         if(userAnswer != null && userAnswer === question.correctAnswer) {
+                        //             correctAnswer++;
+                        //         } else {
+                        //             incorrectAnswer++;
+                        //         }
+                        //     })
+
+                        //     }
+
+            //create event listener for button in order to know when user has selected an answer and prevents them from selecting multiple answers for one question
+                //const button = document.getElementbyId("playButton");
+                //button.addEventListener("click", check);
+                //button.onClick = function() {check();
+            // }
+
+            //make submit button responsive
 
 });
 
@@ -110,11 +145,11 @@ $(document).ready(function(){
 // c. 40
 // d. 32
 
-// 10. What is the plastic piece at the end of a shoelace called?
-// a. Aglet
-// b. Lace tip
-// c. Lace guard
-// d. Ulna
+// 10. Which one is not something Joey Tribbiani from Friends has said in the show?
+// a. "Joey doesn't share food!"
+// b. "How you doin?"
+// c. "Here come the meat sweats."
+// d. "We were on a break!"
 
 
 
